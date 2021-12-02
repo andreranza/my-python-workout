@@ -12,8 +12,8 @@ def guessing_game():
             user_answer = int(input('Please, enter your guess: '))
         except ValueError:
             print('Please, enter a valid integer number.\n')
-            user_answer = int(input('Please, enter your guess: '))
-        
+            continue
+            
         if user_answer == correct_guess:
             print(f'Right! The answer is {user_answer}.')
             break
