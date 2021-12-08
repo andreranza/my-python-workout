@@ -52,6 +52,10 @@ if __name__== "__main__":
     print(my_mean(1, 2, 3))
     print(my_string_function("abc", "ab", "a"))
     print(my_sum3('10', 5, 'abs'))
+<<<<<<< HEAD
+=======
+    # 'abs' would throw a ValueError, whereas ['abc', '10', 10] a TypeError
+>>>>>>> f2dba97 (Add exercise-2.py)
     print(my_sum3('10', 5, 'abs', ['abc', '10', 10]))
     print(my_sum3(['abc', '10', 10], '10', 5, 'abs'))
 
