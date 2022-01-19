@@ -39,6 +39,8 @@ def find_ip_404_error(log_file_name):
     return ip
 
 def transpose_string(string_to_transpose):
+    '''Transpose, a list of strings in which each 
+        string contains multiple words separated by whitespace'''
     list_of_lists = list()
     for item in string_to_transpose:
         list_of_lists.append(item.split())
