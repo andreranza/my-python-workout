@@ -38,11 +38,30 @@ def find_ip_404_error(log_file_name):
                 ip = line.split()[0]
     return ip
 
+def transpose_string(string_to_transpose):
+    list_of_lists = list()
+    for item in string_to_transpose:
+        list_of_lists.append(item.split())
+
+    transposed = list()
+    for i in range(len(list_of_lists)):
+        row = list()
+        for sublist in list_of_lists:
+            row.append(sublist[i])
+        transposed.append(row)
+
+    transposed_final = list()
+    for sublist in transposed:
+        transposed_final.append(' '.join(sublist))
+    
+    return transposed_final
+    
 if __name__ == "__main__":
     test = 'this is a test translation'
     print(pl_sentence(test))
     print(nonsensical_sentence('data/exercise-6-data.txt'))
     print(find_ip_404_error('data/apache-log-file.txt'))
-
+    test = ['abc def ghi', 'jkl mno pqr', 'stu vwx yz']
+    print(transpose_string(test))
 
 
